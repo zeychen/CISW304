@@ -9,7 +9,7 @@ Projects done for CSS3 course
 
 ## Pages - CSS emphasis
 - Home
-- Find Zodiac Animal - CSS sudo-elements
+- Find Zodiac Animal - CSS sudo-elements and DOM manipulation
 - Google Fonts - font types
 - Typography - CSS typography
 - Zoey - animation and background
