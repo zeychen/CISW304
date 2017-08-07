@@ -1,0 +1,77 @@
+/* Uses shadows, letterpress effect, and column:
+	1. shadows (line 33, 58)
+	2. multiple shadows (line 64)
+	3. letterpress effect (line 12-34)
+	4. column width (line 45-49)
+	5. column header (line 52-59)
+	6. justify text (global.css line 10)
+	7. browser prefixes (line 47-48, 54, 74)
+*/
+
+/* content */
+/*********************** letterpress effect **************************/
+.introduction {
+	width:40%;
+	margin:100px auto 0px auto;
+	background: rgba(0, 80, 120, 1);
+	color:#fff;
+	padding:15px 15px 20px 15px;
+	border-radius: 10px;
+	background: #888;
+	font-weight: bold;
+	line-height: 200%;
+}
+
+.intro::first-letter {
+	text-transform: capitalize;
+	font-size:50px;
+}
+
+.intro {
+	color:#666666;
+	letter-spacing:0;
+	/*********************** shadows **************************/
+	text-shadow: 0px 2px 3px #999999;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+/*********************** define column width **************************/
+.content {
+	-webkit-column-width: 280px; /* Chrome, Safari, Opera */
+    -moz-column-width: 280px; /* Firefox */
+    column-width: 280px;
+}
+
+/*********************** column header **************************/
+h1 {
+	-webkit-column-span: all; /* Chrome, Safari, Opera */
+	column-span: all;
+	text-align: center;
+	font-size: 50px;
+	/*********************** shadows **************************/
+	text-shadow: 0px 2px 3px #999999;
+}
+
+/*********************** multiple shadows **************************/
+.main::first-letter {
+	font-size:50px;
+	text-shadow: -2px 1px 2px #222, -1px 2px 1px white;
+
+}
+
+img {
+	width: 100%;
+}
+
+.citation {
+	-webkit-column-span: all; /* Chrome, Safari, Opera */
+	column-span: all;
+	font-size: 0.8em;
+}

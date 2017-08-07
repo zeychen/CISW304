@@ -1,0 +1,100 @@
+/* Uses 4 different fonts from Google Fonts
+3 variations on the display of the fonts include:
+	1. font size (line 108)
+	2. font weight (line 106)
+	3. font style (italic: 73 )
+*/
+
+@font-face {
+    font-family: opensansbold;
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: raleway;
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: arvo;
+    src: url(../fonts/Arvo-Regular.ttf);
+}
+
+@font-face {
+    font-family: audiowide;
+    src: url(../fonts/Audiowide-Regular.ttf);
+}
+
+@font-face {
+    font-family: tangerine;
+    src: url(../fonts/Tangerine-Regular.ttf);
+}
+
+
+/* content */
+.introduction {
+	width:40%;
+	margin:60px auto;
+	background: rgba(0, 80, 120, 1);
+	color:#fff;
+	padding:15px 15px 20px 15px;
+	border-radius: 10px;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.bold {
+	font-family: opensansbold;
+}
+
+/* capitalize first letter */
+.intro::first-letter {
+	font-weight: bold;
+	text-transform: capitalize;
+	font-size:50px;
+}
+
+.row {
+	text-align: center;
+	display:flex;
+	flex-direction:row;
+	margin:0px;
+	align-items: center;
+	margin-top:50px;
+	/*justify-content: center;*/
+}
+
+.logo {
+	justify-content: center;
+}
+
+img:not(.google) {
+	width:100px;
+}
+
+.raleway {
+	font-family: raleway;
+	padding-left: 15px;
+}
+
+.arvo {
+	font-family: arvo;
+	padding-left: 15px;
+}
+
+.audiowide {
+	font-family: audiowide;
+	padding-left: 15px;
+}
+
+.tangerine {
+	font-family: tangerine;
+	padding-left: 15px;
+}
+
+/* type writer effect cursor */
+.typed-cursor{
+    opacity: 0;
+}

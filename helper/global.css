@@ -1,0 +1,147 @@
+/* global */
+html{
+	height:100%;
+	font-size:1.2em;
+}
+body{
+	font-family: 'Open Sans',sans-serif,verdana;
+	width:100%;
+	margin: 0 0 0 0;
+	text-align:justify;
+	color:#666;
+	min-height:100%;
+	display:flex;
+	flex-direction:column;
+	min-height:100vh;
+}
+.content{
+	width:80%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top:50px;
+	margin-bottom: 50px;
+	flex:1;
+}
+
+/* navbar */
+.navbar {
+	width:100%;
+	position:fixed;
+	background-color: rgba(0, 80, 120,1);
+	z-index: 1;
+}
+
+.navbar ul {
+	list-style: none;
+	margin: 0 auto 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+.navbar li {
+	display:inline;
+	
+}
+
+.navbar li a:link, .navbar li i{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+	
+.navbar li a:visited{
+	color: #aaa;
+}	
+	
+.navbar li a:visited:hover{
+	color: #222;
+}
+	
+.navbar li a:hover{					
+	background-color: rgba(0, 170, 255,1);
+}
+	
+.navbar li a:active{					
+	font-style: italic;
+}
+	
+.navbar li:first-child{
+	float:left;
+}
+.navbar li:not(:first-child){
+	float:right;
+}
+.navbar li i{
+	display:none;
+}
+
+/* footer */
+.footer{
+	font-family: 'Open Sans',sans-serif,verdana;
+	padding-top:2em;
+	padding-bottom:2em;
+	background: black;
+}
+.fcontent{
+	width:80%;
+	margin-right:auto;
+	margin-left:auto;
+}
+.fcontent div{
+	margin-top: 1em;
+	margin-bottom: 1em;
+	display: inline-block;
+}
+
+/* social media icons */
+.social {
+	float:right;
+	margin-left:10px;
+	font-weight:bold;
+	color:#aaa;
+}
+
+.social a {
+	text-decoration:none;
+	color:#aaa;
+	border: 1px solid #aaa;
+}
+
+#linked a{
+	padding: 5px 10px 5px 10px;
+}
+#fb a{
+	padding: 5px 15px 5px 15px;
+}
+div .social:hover a{
+	color:#000;
+	background-color:#aaa;
+}
+
+/* responsive design */
+@media screen and (max-width: 480px) {
+	.fcontent{
+		display: flex;
+		flex-direction:column;
+		text-align:center;
+	}
+	.fcontent div:not(:first-child){
+		display:inline-block;
+	}
+	.item{
+		text-align: center;
+	}
+	.social.right{
+		width:36px;
+	}
+}
+
+@media screen and (max-width: 946px) {
+	.navbar li:not(:first-child)/*, .navbar li:not(:last-child)*/{
+		display:none;
+	}
+	.navbar li i.fa-bars{
+		display:inline;
+	}
+}

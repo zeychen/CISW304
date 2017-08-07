@@ -1,0 +1,125 @@
+/* Uses multiple background images, opacity, and border techniques:
+	1. multple background images (lines 12-15)
+	2. opacity (line 94)
+	3. border techniques (line 25)
+*/
+
+/* content */
+/*********************** polaroid effect **************************/
+/*********************** multiple backgrounds **************************/
+.full {
+	width: 100vw;
+	background-image: url(../img/snow-transparent.gif), url(https://mdn.mozillademos.org/files/11307/bubbles.png), url(../img/background1.jpg);
+	background-repeat: no-repeat, no-repeat;
+	background-position: bottom left, bottom left;
+	background-size: cover;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;						/******** border radius ********/
+	-webkit-box-shadow: 3px 3px 3px #777;
+       -moz-box-shadow: 3px 3px 3px #777;
+        	box-shadow: 0 0 0 1px #aaa, 3px 3px 3px #777;
+	text-shadow: 1px 1px #fff;	
+	background: linear-gradient(#b81, #ddd, #ca2);
+	background: -webkit-linear-gradient(#b81, #ddd, #ca2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#b81, #ddd, #ca2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#b81, #ddd, #ca2); /* For Firefox 3.6 to 15 */
+}
+
+.polaroid {
+	-webkit-transform: rotate(-7deg);
+       -moz-transform: rotate(-7deg);
+       		transform: rotate(-7deg);
+  	position: relative;
+  	width: 220px;
+  	float: left;
+    opacity: 0.7;
+}
+
+.polaroid:nth-child(even) {
+	top: 20px;
+	-webkit-transform: rotate(3deg);
+       -moz-transform: rotate(3deg);
+    		transform: rotate(3deg);
+}
+
+.polaroid:nth-child(3n) {
+	-webkit-transform: none;
+	   -moz-transform: none;
+	   		transform: none;
+	position: relative;
+	top: -10px;
+}
+
+.polaroid:nth-child(5n) {
+    position: relative;
+  	right: 5px;
+  	top: -50px;
+    -webkit-transform: rotate(-10deg);
+       -moz-transform: rotate(-10deg);
+       		transform: rotate(-10deg);
+}
+
+.polaroid:nth-child(6n) {
+    position: relative;
+  	top: 10px;
+}
+
+.polaroid:nth-child(8n) {
+  	position: relative;
+  	top: 8px;
+  	right: 5px;
+  	-webkit-transform: rotate(10deg);
+       -moz-transform: rotate(10deg);
+       		  transform: rotate(10deg);
+}
+
+.polaroid img {
+	position: relative;
+	width: 200px;
+	border: 10px solid #fff;			/********* border styling *********/
+	border-bottom: 45px solid #fff;
+	-webkit-box-shadow: 3px 3px 3px #777;
+       -moz-box-shadow: 3px 3px 3px #777;
+        	box-shadow: 0 0 0 1px #ddd, 2px 3px 3px #777;
+}
+
+.polaroid p {
+	font-weight: bold;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0px;
+  z-index: 1;
+  background-color: #565656;
+  color: transparent;
+  text-shadow: 0px 1px 2px rgba(255,255,255,0.5);		/******** opacity *******/
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+        	background-clip: text;
+}
+
+.polaroid:hover {
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+     -moz-transform: rotate(0deg);
+          transform: rotate(0deg);
+
+}
+
+.right {
+	float: right;
+	width: 300px;
+	position: relative;
+	top:-200px;
+}
+
+
+
